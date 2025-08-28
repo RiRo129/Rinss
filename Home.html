@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="poto/ChatGPT Image Aug 21, 2025, 10_36_41 PM.png" type="image/x-icon" style="height:fit-content;">
+    <title>Home</title>
+    <link rel="stylesheet" href="home.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+        <!-- header -->
+<header>
+  <nav class="navbar navbar-expand-lg navbar-dark text-white shadow">
+    <div class="container-fluid">
+      <!-- Logo -->
+      <h1 class="fw-bold mb-0">ℒ𝓸𝓿𝒆 𝔂𝓸𝓾</h1>
+
+      <!-- Tombol toggle untuk HP -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Link navigasi -->
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto text-center">
+          <li class="nav-item">
+            <a class="nav-link active" href="Home.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="Galery.html">Galery</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="book.html">Mini Book</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="game.html">Mini Games</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<script>
+  // Tutup navbar otomatis setelah klik link (khusus di HP)
+  document.querySelectorAll('.nav-link').forEach(link => {
+    link.addEventListener('click', () => {
+      const navbarCollapse = document.querySelector('.navbar-collapse');
+      const bsCollapse = bootstrap.Collapse.getInstance(navbarCollapse);
+
+      if (navbarCollapse.classList.contains('show')) {
+        bsCollapse.hide(); // cukup hide, tidak toggle ulang
+      }
+    });
+  });
+</script>
+
+<!-- isi konten -->
+<div>
+    <section class="container-fluid py-5 d-flex flex-column flex-lg-row align-items-center gap-4">
+  <!-- Left Side -->
+  <div class="flex-fill px-5" id="leftSide">
+    <div class="mb-4">
+      <h1 class="fw-semibold fs-2">
+        Hi, <span class="fw-bold fs-1">Sayangkuu !</span>
+      </h1>
+      <h1 class="fw-bold fs-1">RINI NUR ASYIAAAAPPP</h1>
+      <p class="text-secondary fs-5">
+        Cieeee Ulang Tahunnn ya? Selamat Ulang Tahun ya Sayang. 
+      </p>
+      <p class="text-secondary fs-5">
+        Aku buat web ini khusus lohh buat kamu, dan kamu bisa buka web ini kapan aja kamu mau. Semoga Suka Ya!
+      </p>
+    </div>
+  </div>
+
+  <!-- Right Side -->
+  <div class="flex-fill text-center col-md-12 px-3 py-4" id="rightSide">
+    <img 
+      src="poto/place.jpeg" 
+      class="img-thumbnail" 
+      alt="poto" 
+      style="border:none;">
+  </div>
+</section>
+
+
+<style>
+/* Awalnya sembunyi */
+#leftSide, #rightSide {
+  display: none;
+}
+
+/* Animasi masuk dari kiri */
+@keyframes slideInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Animasi masuk dari kanan */
+@keyframes slideInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.show-left {
+  display: block !important;
+  animation: slideInLeft 1s ease-out forwards;
+}
+
+.show-right {
+  display: block !important;
+  animation: slideInRight 1s ease-out forwards;
+}
+</style>
+
+<!-- bottom side -->
+ <section class="container py-5">
+  <div>
+    <h1 class="fw-bold fs-1 text-white">
+      Cerita <span class="cs rounded px-2">Singkat</span>
+    </h1>
+    <div class="text-secondary">
+      <p>
+        Pertama kali aku melihat kamu bekerja di Takoyaki aku melihatmu dengan penuh ketertarikan di hatiku, tetapi aku diam dan hanya bisa pura" biasa saja dengan teman kerja dan juga kamu! Setelah tau nama kamu, dan setelah sekian kali ngobrol hingga mengejek kalau kamu itu <b>Pendek!!</b> dan kamu memberikan respon yang lucu sehingga membuat aku ingin terus mengejekmu.
+        Setelah kita bisa ngobrol setiap aku mencuri waktu untuk merokok, aku sangat senang hingga membuat aku selalu ingin shift siang hanya karna kita bisa ngobrol dan aku bisa memandang kamu walaupun dari dalam outlet, aku selalu mencari celah agar bisa sekedar melihatmu.
+      </p>
+
+      <p>
+        Dan saat aku secara tidak sengaja atau bisa dikatakan bercanda memintamu nunggu aku pulang agar kita bisa pulang bareng, eh malah kamu mengiyakan dan aku sangat bingung kekita kamu beneran nungguin sampai aku pulang, aku sangat bingung akan mengajakmu kemana karena pertama kali main bareng. Akhirnya aku mengajakmu ke angkringan yang biasa aku kunjungi karena <b>MURAH</b> setelah berbincang"
+        ternyata dan menghabiskan waktu untuk bercerita didalam hatiku aku sangat bahagia dan kamu ternyata adalah sosok yang sangat dewasa dalam menghadapi dunia ini.
+      </p>
+
+      <p>
+        Setelah itu kita pun bertukar instagram dan lanjut ke WA. setelah lama chatan dan seringnya bertemu saat bekerja aku pun jatuh hati padamu.
+        Aku selalu ingat saat kita <b>DeepTalk</b> di pantai, aku ingat bahwa kamu mengatakan hal yang membuatku mundur darimu "Usia kita jauh berbeda dan kamu tau aku akan kuliah kamu realistis dengan keadaan karena menurutmu anak kuliahan tidak menghasilkan uang". dari perkataan tersebut
+        aku menyimpulkan bahwa aku tidak akan bisa dengan kamu dan aku berpikir aku sudah ditolak sebelum menyatakan perasaanku. tetapi setelah sekian hari kamu membangkitkan kepercayaanku lagi agar aku bisa memperjuangkanmu lagi
+        Saat kita vc aku secara tidak sengaja mengukapkan perasaan dan kamu menantangku agar mengukapkan perasaanku tersebut tetapi aku mengelak bahwa itu tidak bisa di katakan secara online dan kamu pun menantang aku untuk mengatakannya secara langsung
+        setelah kita bertemu kamu menagih tantangan tersebut dan akhirnya aku melakukannya! yang tidak ku sangka ternyata kamu menerima cintaku dengan sangat mudah.
+      </p>
+
+      <p>
+        Dan setelah perjalanan cinta yang sangat penuh drama menyedihkan hingga kebahagiaan yang tidak akan aku rasakan di orang lain, akhirnya kita bisa bertahan hingga saat ini.
+      </p>
+
+      <p>
+        Terima kasih sayang karena kamu mau dan bisa menerima segala kekuranganku mulai dari ekonomi hingga sifat" jelekku yang selalu menyakitkan hatimu, Maaf jika aku belum bisa menjadi pribadi seperti apa yang kamu ingin kan. <b>ℒ𝓸𝓿𝒆 𝔂𝓸𝓾</b>
+      </p>
+    </div>
+  </div>
+</section>
+<!-- Tombol untuk buka ulang kartu -->
+    <div class="text-center p-5">
+      <button id="openCardBtn">Buka Kartu Ucapan</button>
+    </div>
+
+  <!-- Popup Kartu Ucapan -->
+  <div class="card-popup" id="cardPopup">
+    <div class="card-content">
+      <h2>🎉 𝐻𝒶𝓅𝓅𝓎𝒷𝒾𝓇𝓉𝒽𝒹𝒶𝓎!</h2>
+      <p>Mungkin 2 September adalah hari yang sangat istimewa bagi kamu, karena di tanggal inilah Tuhan menghadirkanmu ke dunia. Selamat setelah perjuangan yang sangat-sangat tidak mudah akhirnya kamu masih kuat sampai saat ini dan masih di beri umur panjang oleh Tuhan. Semoga panjang umur, di mudahkan segala urusan, menjadi manusia yang bermanfaat, semoga selalu ada kebahagiaan di setiap langkah.</p>
+      <p>Sekali Lagi <b>SELAMAT ULANG TAHUN CINTA</b></p>
+      <button id="closeCardBtn">Tutup</button>
+    </div>
+  </div>
+</div>
+
+<script>
+const cardPopup = document.getElementById('cardPopup');
+const openBtn = document.getElementById('openCardBtn');
+const closeBtn = document.getElementById('closeCardBtn');
+const leftSide = document.getElementById('leftSide');
+const rightSide = document.getElementById('rightSide');
+
+// Popup muncul otomatis saat halaman dibuka
+window.onload = () => {
+  cardPopup.style.display = 'flex';
+  leftSide.style.display = 'none';
+  rightSide.style.display = 'none';
+};
+
+// Buka kartu ucapan manual
+openBtn.addEventListener('click', () => {
+  cardPopup.style.display = 'flex';
+  leftSide.style.display = 'none';
+  rightSide.style.display = 'none';
+});
+
+// Tutup kartu ucapan + jalankan animasi
+closeBtn.addEventListener('click', () => {
+  cardPopup.style.display = 'none';
+  leftSide.classList.add('show-left');
+  rightSide.classList.add('show-right');
+});
+</script>
+
+<!-- footer -->
+ <footer class="footer text-white text-center py-3 mt-5 m-0">
+  <div class="container">
+    <p class="mb-1">&copy; 2025 Ahmad Robith. All rights reserved.</p>
+    <div>
+      <a href="index.html" class="text-white px-2" style="text-decoration:none;">Keluar</a>
+    </div>
+  </div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+</body>
+</html>

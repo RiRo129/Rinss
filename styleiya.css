@@ -1,0 +1,49 @@
+body {
+  margin: 0;
+  background: linear-gradient(135deg, #61c8ff, #def7ff);
+  font-family: Arial, sans-serif;
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(15px);
+  border-radius: 20px;
+  padding: 20px;
+  color: white;
+}
+
+.pin input {
+  width: 45px;
+  height: 55px;
+  border-radius: 10px;
+  border: 2px solid #fff;
+  background: rgba(255,255,255,0.2);
+  text-align: center;
+  font-size: 22px;
+  color: #fff;
+}
+
+.keypad {
+  max-width: 280px;
+  margin: 15px auto 0;
+}
+
+.keypad .btn {
+  width: 100%;
+  height: 65px;
+  border-radius: 15px;
+  font-size: 24px;
+  background: #007bff;
+  color: white;
+  font-weight: bold;
+  transition: 0.2s;
+}
+
+.keypad .btn:hover {
+  background: #0056b3;
+}
+
+.del-btn {
+  background: #e74c3c !important;
+  color: white;
+}

@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="poto/ChatGPT Image Aug 21, 2025, 10_36_41 PM.png" type="image/x-icon" style="height:fit-content;">
+  <title>Pop It Game</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      background: linear-gradient(175deg, #61c8ff, #def7ff);
+      font-family: sans-serif;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    /* Loading Screen */
+    #loading {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: linear-gradient(175deg, #61c8ff, #def7ff);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      z-index: 2000;
+    }
+
+    .progress {
+      width: 250px;
+      height: 25px;
+      border-radius: 15px;
+      overflow: hidden;
+    }
+
+    .progress-bar {
+      background: linear-gradient(90deg, #2563eb, #60a5fa);
+    }
+
+    #game {
+      display: none;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+    h1 {
+      margin-bottom: 20px;
+      color: #1f2937;
+    }
+
+    #board {
+      display: grid;
+      gap: 12px;
+      background: #fef3c7;
+      padding: 20px;
+      border-radius: 20px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    }
+
+    .bubble {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      background: linear-gradient(145deg, #60a5fa, #2563eb);
+      box-shadow: inset 2px 2px 6px rgba(0,0,0,0.4);
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .popped {
+      background: linear-gradient(145deg, #a5b4fc, #6366f1);
+      box-shadow: inset -2px -2px 6px rgba(0,0,0,0.4);
+      transform: scale(0.9);
+    }
+
+    #controls {
+      margin-top: 20px;
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      justify-content: center;
+    }
+
+    #status {
+      margin-top: 10px;
+      font-weight: bold;
+      color: #1f2937;
+    }
+  </style>
+</head>
+<body>
+  <!-- Loading Screen -->
+  <div id="loading">
+    <h2 class="mb-3 fw-bold">Sabar Ya Cantik...</h2>
+    <div class="progress">
+      <div class="progress-bar progress-bar-striped progress-bar-animated" 
+           role="progressbar" style="width: 0%"></div>
+    </div>
+  </div>
+
+  <!-- Game -->
+  <div id="game">
+    <h1>🟣 Pop It Game 🟡</h1>
+    <div id="board"></div>
+    <div id="controls">
+      <button id="resetBtn" class="btn btn-warning">Reset</button>
+      <span id="levelText">Level: 1</span>
+      <a href="Home.html" class="btn btn-primary text-black">Keluar</a>
+    </div>
+    <div id="status"></div>
+  </div>
+
+  <script>
+    const board = document.getElementById('board');
+    const resetBtn = document.getElementById('resetBtn');
+    const levelText = document.getElementById('levelText');
+    const statusText = document.getElementById('status');
+    const loadingScreen = document.getElementById('loading');
+    const gameScreen = document.getElementById('game');
+    const progressBar = document.querySelector('.progress-bar');
+
+    let currentLevel = 1;
+    let timer;
+
+    function getLevelConfig(level) {
+      // Board size tetap max 4x6
+      const cols = 4;
+      let rows = 4 + (level - 1);
+      if (rows > 6) rows = 6;
+
+      // Refill time makin cepat, min 400ms
+      let time = 2000 - (level - 1) * 300;
+      if (time < 400) time = 400;
+
+      return { rows, cols, time };
+    }
+
+    function createBoard(level) {
+      board.innerHTML = '';
+      const config = getLevelConfig(level);
+      board.style.gridTemplateColumns = `repeat(${config.cols}, 60px)`;
+
+      for (let i = 0; i < config.rows * config.cols; i++) {
+        const bubble = document.createElement('div');
+        bubble.classList.add('bubble');
+        bubble.addEventListener('click', () => {
+          bubble.classList.add('popped');
+          checkWin();
+        });
+        board.appendChild(bubble);
+      }
+
+      clearInterval(timer);
+      timer = setInterval(() => {
+        const bubbles = document.querySelectorAll('.bubble');
+        const randomBubble = bubbles[Math.floor(Math.random() * bubbles.length)];
+        if (randomBubble.classList.contains('popped')) {
+          randomBubble.classList.remove('popped');
+        }
+      }, config.time);
+
+      levelText.textContent = `Level: ${level}`;
+      statusText.textContent = '';
+    }
+
+    function checkWin() {
+      const bubbles = document.querySelectorAll('.bubble');
+      const allPopped = Array.from(bubbles).every(b => b.classList.contains('popped'));
+      if (allPopped) {
+        clearInterval(timer);
+        statusText.textContent = '🎉 Level Selesai!';
+        setTimeout(() => {
+          currentLevel++;
+          createBoard(currentLevel);
+        }, 1000);
+      }
+    }
+
+    resetBtn.addEventListener('click', () => {
+      currentLevel = 1;
+      createBoard(currentLevel);
+    });
+
+    // Loading progress selama 5 detik
+    window.addEventListener("load", () => {
+      let progress = 0;
+      const interval = setInterval(() => {
+        progress += 2;
+        progressBar.style.width = progress + "%";
+        if (progress >= 100) {
+          clearInterval(interval);
+          setTimeout(() => {
+            loadingScreen.style.display = "none";
+            gameScreen.style.display = "flex";
+            createBoard(currentLevel);
+          }, 200);
+        }
+      }, 100); // 100ms * 50 = 5000ms (5 detik)
+    });
+  </script>
+</body>
+</html>

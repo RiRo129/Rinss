@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="poto/ChatGPT Image Aug 21, 2025, 10_36_41 PM.png" type="image/x-icon" style="height:fit-content;">
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <title>Galery</title>
+</head>
+<body>
+  <style>
+      /* Global */
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background: linear-gradient(175deg, #61c8ff, #def7ff);
+      font-family: Arial, sans-serif;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+    }
+
+     /* Header */
+    header {
+      margin: 0;
+      background: linear-gradient(135deg, #61c8ff, #d8eaf0);
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+      position: sticky;
+  top: 0;
+  z-index: 1050; /* lebih tinggi dari konten biasa */
+    }
+
+    nav a {
+      color: white !important;
+      text-decoration: none;
+      padding: 0 10px;
+      font-weight: 500;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    /* Animasi smooth collapse */
+    .navbar-collapse {
+      transition: max-height 0.5s ease-in-out;
+      overflow: hidden;
+    }
+    .navbar-collapse.collapsing {
+      max-height: 0;
+    }
+    .navbar-collapse.collapse.show {
+      max-height: 500px;
+    }
+    /* isi */
+    .dok{
+      max-width: 230px;
+      border-radius: 5px; /* opsional, untuk sudut melengkung */
+      background-color: white;
+      padding-top:10px;
+      padding-bottom: 50px;
+      padding-left:10px ;
+      padding-right:10px;
+    }
+    .dok img {
+  width: 100%;
+  height: 300px; /* atau ukuran lain yang kamu inginkan */
+  object-fit: cover;
+}
+.footer {
+  box-shadow: 0 -3px 8px rgba(0,0,0,0.2);
+  position: relative;
+  bottom: 0px;
+  width: 100%;
+  background: linear-gradient(135deg, #61c8ff, #def7ff);
+}
+</style>
+<!-- Header -->
+<header>
+  <nav class="navbar navbar-expand-lg navbar-dark text-white shadow">
+    <div class="container-fluid">
+      <!-- Logo -->
+      <h1 class="fw-bold mb-0">ℒ𝓸𝓿𝒆 𝔂𝓸𝓾</h1>
+
+      <!-- Tombol toggle untuk HP -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Link navigasi -->
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto text-center">
+          <li class="nav-item">
+            <a class="nav-link active" href="Home.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="Galery.html">Galery</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="book.html">Mini Book</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="game.html">Mini Games</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<script>
+  // Tutup navbar otomatis setelah klik link (khusus di HP)
+  document.querySelectorAll('.nav-link').forEach(link => {
+    link.addEventListener('click', () => {
+      const navbarCollapse = document.querySelector('.navbar-collapse');
+      const bsCollapse = bootstrap.Collapse.getInstance(navbarCollapse);
+
+      if (navbarCollapse.classList.contains('show')) {
+        bsCollapse.hide(); // cukup hide, tidak toggle ulang
+      }
+    });
+  });
+</script>
+<p class=" text-white fw-bold fs-1" style="padding-top: 20px;">📸‎‧₊˚✧𝑀𝑦 𝑙𝑜𝑣𝑒✧˚₊‧📸</p>
+  <section class="container py-4">
+  <div class="row g-3">
+    <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+      <div class="dok mx-auto">
+        <img src="foto/foto (1).jpg" alt="awal" class="img-fluid">
+      </div>
+    </div>
+    <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+      <div class="dok mx-auto">
+        <img src="foto/foto (1).webp" alt="awal" class="img-fluid">
+      </div>
+    </div>
+    <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+      <div class="dok mx-auto">
+        <img src="foto/foto (2).jpg" alt="awal" class="img-fluid">
+      </div>
+    </div>
+    <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+      <div class="dok mx-auto">
+        <img src="foto/foto (2).webp" alt="awal" class="img-fluid">
+      </div>
+    </div>
+    <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+      <div class="dok mx-auto">
+        <img src="foto/foto (3).jpg" alt="awal" class="img-fluid">
+      </div>
+    </div>
+    <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+      <div class="dok mx-auto">
+        <img src="foto/foto (3).webp" alt="awal" class="img-fluid">
+      </div>
+    </div>
+    <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+      <div class="dok mx-auto">
+        <img src="foto/foto (4).jpg" alt="awal" class="img-fluid">
+      </div>
+    </div>
+    <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+      <div class="dok mx-auto">
+        <img src="foto/foto (4).webp" alt="awal" class="img-fluid">
+      </div>
+    </div>
+    <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+      <div class="dok mx-auto">
+        <img src="foto/foto (5).jpg" alt="awal" class="img-fluid">
+      </div>
+    </div>
+    <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+      <div class="dok mx-auto">
+        <img src="foto/foto (5).webp" alt="awal" class="img-fluid">
+      </div>
+    </div>
+    <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+      <div class="dok mx-auto">
+        <img src="foto/foto (6).jpg" alt="awal" class="img-fluid">
+      </div>
+    </div>
+    <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+      <div class="dok mx-auto">
+        <img src="foto/foto (6).webp" alt="awal" class="img-fluid">
+      </div>
+    </div>
+    <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+      <div class="dok mx-auto">
+        <img src="foto/foto (7).jpg" alt="awal" class="img-fluid">
+      </div>
+    </div>
+    <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+      <div class="dok mx-auto">
+        <img src="foto/foto (7).webp" alt="awal" class="img-fluid">
+      </div>
+    </div>
+    <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+      <div class="dok mx-auto">
+        <img src="foto/foto (8).jpg" alt="awal" class="img-fluid">
+      </div>
+    </div>
+    <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+      <div class="dok mx-auto">
+        <img src="foto/foto (8).webp" alt="awal" class="img-fluid">
+      </div>
+    </div>
+    <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+      <div class="dok mx-auto">
+        <img src="foto/foto (9).jpg" alt="awal" class="img-fluid">
+      </div>
+    </div>
+    <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+      <div class="dok mx-auto">
+        <img src="foto/foto (9).webp" alt="awal" class="img-fluid">
+      </div>
+    </div>
+    <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+      <div class="dok mx-auto">
+        <img src="foto/foto (10).jpg" alt="awal" class="img-fluid">
+      </div>
+    </div>
+    <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+      <div class="dok mx-auto">
+        <img src="foto/foto (11).jpg" alt="awal" class="img-fluid">
+      </div>
+    </div>
+    <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+      <div class="dok mx-auto">
+        <img src="foto/foto (12).jpg" alt="awal" class="img-fluid">
+      </div>
+    </div>
+    <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+      <div class="dok mx-auto">
+        <img src="foto/foto (13).jpg" alt="awal" class="img-fluid">
+      </div>
+    </div>
+    <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+      <div class="dok mx-auto">
+        <img src="foto/foto (14).jpg" alt="awal" class="img-fluid">
+      </div>
+    </div>
+    <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+      <div class="dok mx-auto">
+        <img src="foto/foto (15).jpg" alt="awal" class="img-fluid">
+      </div>
+    </div>
+    <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+      <div class="dok mx-auto">
+        <img src="foto/foto (16).jpg" alt="awal" class="img-fluid">
+      </div>
+    </div>
+    <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+      <div class="dok mx-auto">
+        <img src="foto/foto (17).jpg" alt="awal" class="img-fluid">
+      </div>
+    </div>
+    <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+      <div class="dok mx-auto">
+        <img src="foto/foto (18).jpg" alt="awal" class="img-fluid">
+      </div>
+    </div>
+    <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+      <div class="dok mx-auto">
+        <img src="foto/foto (19).jpg" alt="awal" class="img-fluid">
+      </div>
+    </div>
+    <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+      <div class="dok mx-auto">
+        <img src="foto/foto (20).jpg" alt="awal" class="img-fluid">
+      </div>
+    </div>
+    <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+      <div class="dok mx-auto">
+        <img src="foto/foto (21).jpg" alt="awal" class="img-fluid">
+      </div>
+    </div>
+    <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+      <div class="dok mx-auto">
+        <img src="foto/foto (22).jpg" alt="awal" class="img-fluid">
+      </div>
+    </div>
+    <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+      <div class="dok mx-auto">
+        <img src="foto/foto (23).jpg" alt="awal" class="img-fluid">
+      </div>
+    </div>
+    <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+      <div class="dok mx-auto">
+        <img src="foto/foto (24).jpg" alt="awal" class="img-fluid">
+      </div>
+    </div>
+    <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+      <div class="dok mx-auto">
+        <img src="foto/foto (25).jpg" alt="awal" class="img-fluid">
+      </div>
+    </div>
+    <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+      <div class="dok mx-auto">
+        <img src="foto/foto (26).jpg" alt="awal" class="img-fluid">
+      </div>
+    </div>
+    <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+      <div class="dok mx-auto">
+        <img src="foto/foto (27).jpg" alt="awal" class="img-fluid">
+      </div>
+    </div>
+    <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+      <div class="dok mx-auto">
+        <img src="foto/foto (28).jpg" alt="awal" class="img-fluid">
+      </div>
+    </div>
+    <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+      <div class="dok mx-auto">
+        <img src="foto/foto (29).jpg" alt="awal" class="img-fluid">
+      </div>
+    </div>
+    <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+      <div class="dok mx-auto">
+        <img src="foto/foto (30).jpg" alt="awal" class="img-fluid">
+      </div>
+    </div>
+    <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+      <div class="dok mx-auto">
+        <img src="foto/foto (31).jpg" alt="awal" class="img-fluid">
+      </div>
+    </div>
+    <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+      <div class="dok mx-auto">
+        <img src="foto/foto (32).JPG" alt="awal" class="img-fluid">
+      </div>
+    </div>
+    <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+      <div class="dok mx-auto">
+        <img src="foto/foto (33).JPG" alt="awal" class="img-fluid">
+      </div>
+    </div>
+    <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+      <div class="dok mx-auto">
+        <img src="foto/foto (34).JPG" alt="awal" class="img-fluid">
+      </div>
+    </div>
+    <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+      <div class="dok mx-auto">
+        <img src="foto/foto (35).JPG" alt="awal" class="img-fluid">
+      </div>
+    </div>
+    <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+      <div class="dok mx-auto">
+        <img src="foto/foto (36).JPG" alt="awal" class="img-fluid">
+      </div>
+    </div>
+    <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+      <div class="dok mx-auto">
+        <img src="foto/foto (37).JPG" alt="awal" class="img-fluid">
+      </div>
+    </div>
+    <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+      <div class="dok mx-auto">
+        <img src="foto/foto (38).jpg" alt="awal" class="img-fluid">
+      </div>
+    </div>
+    <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+      <div class="dok mx-auto">
+        <img src="foto/foto (39).jpg" alt="awal" class="img-fluid">
+      </div>
+    </div>
+    <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+      <div class="dok mx-auto">
+        <img src="foto/foto (40).jpg" alt="awal" class="img-fluid">
+      </div>
+    </div>
+    <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+      <div class="dok mx-auto">
+        <img src="foto/foto (41).jpg" alt="awal" class="img-fluid">
+      </div>
+    </div>
+    <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+      <div class="dok mx-auto">
+        <img src="foto/foto (42).jpg" alt="awal" class="img-fluid">
+      </div>
+    </div>
+    
+  </div>
+</section>
+
+<!-- footer -->
+ <footer class="footer text-white text-center py-3 mt-5 m-0">
+  <div class="container">
+    <p class="mb-1">&copy; 2025 Ahmad Robith. All rights reserved.</p>
+    <div>
+      <a href="index.html" class="text-white px-2" style="text-decoration:none;">Keluar</a>
+    </div>
+  </div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+</body>
+</html>
